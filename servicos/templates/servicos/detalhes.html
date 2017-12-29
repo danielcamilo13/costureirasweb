@@ -1,0 +1,17 @@
+
+<h1>{{ servicos.nome }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+teste
+
+<!-- {% for servico in servico.nome_set.all %} -->
+    <!-- {{costureira.cidade}} -->
+<!-- {% endfor %} -->
+
+{%if todos_servicos%}
+{% for servico in todos_servicos%}
+{{servico.nome}}
+{%endfor%}
+{% endif%}

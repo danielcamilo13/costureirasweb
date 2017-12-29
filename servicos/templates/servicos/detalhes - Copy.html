@@ -1,0 +1,40 @@
+<!-- {% load i18n admin_static %} -->
+{% load staticfiles %}
+
+{% if todos_servicos %}
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<link type="text/css" rel="stylesheet" media="screen" href="{%static "/servicos/css/servicos.css"%}" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Servicos</title>
+</head>
+<body>
+    <div id="servicos">
+        Pagina completa
+        <div id="cabecalho">
+            cabecalho
+        </div>
+            <div id="conteudo">
+                <div id="conteudo-principal">
+                    <ul>
+                        {% for servico in todos_servicos %}
+                        <li>{{servico}}</li>
+                        {% endfor %}
+                    </ul>
+                        {%else%}
+                        <p>nao foi localizado nenhum servico</p>
+                        {% endif %}
+                </div>
+                <div id="conteudo-esquerda">
+                    <H3>conteudo da esquerda</H3><br>
+                    <img  src="{% static "servicos/img/costureira-servicos.jpg" %}"/>
+                </div>
+            </div>
+        <div id="rodape">
+            rodape
+        </div>
+    </div>
+</body>
+</html>
